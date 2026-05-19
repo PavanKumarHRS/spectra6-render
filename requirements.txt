@@ -1,4 +1,9 @@
+fastapi
 Flask
+uvicorn
 gunicorn
 firebase-admin
+google-cloud-storage
+requests
 Pillow
+numpy
