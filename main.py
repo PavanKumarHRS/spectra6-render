@@ -162,7 +162,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def home():
-    return jsonify({"status": "running"})
+    return jsonify({"status": "running_Spectra6"})
 
 
 @app.route("/renderSixColor", methods=["POST"])
