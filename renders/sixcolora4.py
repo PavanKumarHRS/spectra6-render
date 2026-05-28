@@ -23,9 +23,24 @@ from urllib.parse import quote
 # FIREBASE INIT
 # =====================================================
 
-cred = credentials.Certificate(
-    "firebase/serviceAccount.json"
+# cred = credentials.Certificate(
+#     "firebase/serviceAccount.json"
+# )
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+firebase_path = os.path.abspath(
+    os.path.join(
+        BASE_DIR,
+        "..",
+        "firebase",
+        "serviceAccount.json"
+    )
 )
+
+print("Firebase Path =", firebase_path)
+
+cred = credentials.Certificate(firebase_path)
 
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred, {
