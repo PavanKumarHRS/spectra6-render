@@ -42,11 +42,23 @@ from urllib.parse import quote
 #
 # cred = credentials.Certificate(firebase_path)
 
+# if not firebase_admin._apps:
+#
+#     firebase_admin.initialize_app({
+#         "storageBucket": "epaper-30f1b.firebasestorage.app"
+#     })
+#
+# bucket = storage.bucket()
+
+
 if not firebase_admin._apps:
 
-    firebase_admin.initialize_app({
-        "storageBucket": "epaper-30f1b.firebasestorage.app"
-    })
+    firebase_admin.initialize_app(
+        options={
+            "storageBucket":
+            "epaper-30f1b.firebasestorage.app"
+        }
+    )
 
 bucket = storage.bucket()
 
