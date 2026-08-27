@@ -7,3 +7,8 @@ google-cloud-storage
 requests
 Pillow
 numpy
+requests
+PyMuPDF
+flask-cors
+paho-mqtt
+sarvamai
